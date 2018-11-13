@@ -318,8 +318,8 @@ def ungroup_go_imports(*paths):
                 _ungroup_go_imports(f)
 
 
-BEGIN_IMPORT_REGEX = ur'import \(\s*'
-END_IMPORT_REGEX = ur'\)\s*'
+BEGIN_IMPORT_REGEX = r'import \(\s*'
+END_IMPORT_REGEX = r'\)\s*'
 
 
 def _ungroup_go_imports(fname):
