@@ -28,7 +28,7 @@ ENV = os.getenv('APPSCODE_ENV', 'dev').lower()
 
 def _goenv():
     env = {}
-    for line in subprocess.check_output(['go', 'env']).split('\n'):
+    for line in subprocess.check_output(['go', 'env']).split(b'\n'):
         line = line.strip()
         if len(line) == 0:
             continue
