@@ -2,3 +2,5 @@
 .DS_Store
 *.box
 .vscode/
+__pycache__
+*.pyc

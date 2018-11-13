@@ -29,11 +29,11 @@ ENV = os.getenv('APPSCODE_ENV', 'dev').lower()
 def _goenv():
     env = {}
     for line in subprocess.check_output(['go', 'env']).split(b'\n'):
-        line = line.strip()
+        line = str(line.strip().decode('utf-8'))
         if len(line) == 0:
             continue
-        k, v = line.split(b'=', 1)
-        v = v.strip(b'"')
+        k, v = line.split('=', 1)
+        v = v.strip('"')
         if len(v) > 0:
             env[k] = v
     return env
