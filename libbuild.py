@@ -32,8 +32,8 @@ def _goenv():
         line = line.strip()
         if len(line) == 0:
             continue
-        k, v = line.split('=', 1)
-        v = v.strip('"')
+        k, v = line.split(b'=', 1)
+        v = v.strip(b'"')
         if len(v) > 0:
             env[k] = v
     return env
